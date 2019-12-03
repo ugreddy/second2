@@ -17,12 +17,6 @@ steps:
     platform: '$(BuildPlatform)'
     configuration: '$(BuildConfiguration)'
 
-- task: CopyFiles@2
-  displayName: 'Copy Files to: drop'
-  inputs:
-    SourceFolder: firsrex1.sln
-    TargetFolder: '$(build.artifactstagingdirectory)'
-
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
   inputs:
